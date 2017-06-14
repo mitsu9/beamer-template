@@ -1,0 +1,62 @@
+% Color
+\definecolor{light-gray}{gray}{0.4}
+
+% Delete symbols
+\setbeamertemplate{navigation symbols}{}
+
+% Fonts
+\usefonttheme{professionalfonts}
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\kanjifamilydefault}{\gtdefault}
+\setbeamercolor{normal text}{fg=text-color}
+
+% Block
+\setbeamercolor{block title}{fg=block-title, bg=block-background}
+\setbeamercolor{block body}{bg=block-background!10!}
+\addtobeamertemplate{block begin}
+  {}{\vspace{-0.5em}}
+\addtobeamertemplate{block end}
+  {\vspace{-0.5em}}{}
+
+% Title
+\setbeamertemplate{title page}{
+    \begin{flushright}{\includegraphics[scale=0.18]{assets/logo} \par}\end{flushright}
+    \vspace{0.5em}
+    {\Large \textbf{\textcolor{main-color}{\inserttitle}}} \par
+    \vspace{0.5em}
+    \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle \par
+    \vspace{1.5em}
+    \usebeamerfont{author}\textcolor{text-color}{\textbf{\insertauthor}} \par
+    \vspace{0.3em}
+    \usebeamerfont{institute}\textcolor{text-color}{{\small \insertinstitute}} \par
+    \vspace{0.3em}
+    \usebeamerfont{date}\textcolor{text-color}{\insertdate} \par
+    \vspace{0.5em}
+}
+
+% Frame Title
+\setbeamerfont{frametitle}{size=\Large}
+\setbeamercolor{frametitle}{fg=main-color, bg=white}
+\setbeamertemplate{frametitle}{
+\leavevmode
+\begin{beamercolorbox}[wd=\paperwidth,ht=2.2ex,dp=1ex]{frametitle}\underline{\makebox[\paperwidth][l]{\hspace{8mm}{\insertframetitle}}}\end{beamercolorbox}}
+
+% Footer
+\setbeamertemplate{footline}[text line]{\parbox{\linewidth}{\vspace*{-24pt}{\textcolor{light-gray}{\small \hfill\hfill\insertpagenumber}}}}
+
+% Footnote
+\renewcommand*{\thefootnote}{[\arabic{footnote}]}
+\setbeamertemplate{footnote}{%
+    \leavevmode \insertfootnotemark~\insertfootnotetext \vspace{0.5em}
+}
+\let\oldfootnote\footnote
+\renewcommand\footnote[1][]{\oldfootnote[frame, #1]} % http://tex.stackexchange.com/questions/27626/beamer-footnote-not-showing
+
+% bibtex
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\usepackage[backend=bibtex, style=authoryear]{biblatex}
+\renewcommand{\footnotesize}{\scriptsize}
+\setbeamercolor{bibliography entry author}{fg=darkgray}
+\setbeamercolor{bibliography entry title}{fg=darkgray}
+\setbeamercolor{bibliography entry location}{fg=darkgray}
+\setbeamercolor{bibliography entry note}{fg=darkgray}

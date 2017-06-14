@@ -1,0 +1,51 @@
+\documentclass[11pt, uplatex, unicode, dvipdfmx]{beamer}
+
+%% variables %%
+
+% title
+\title[]{Beamer Template - Looooong Titleの時はこんな感じになる}
+\author[]{\underline{Mitsunobu Homma}} % 第一著者にアンダーライン引きたい時は力技で
+\date{\today}
+\institute[]{Graduate School of Engineering, Soka University, Tokyo}
+
+% color
+\definecolor{main-color}{RGB}{0,84,165} % タイトルなどに使われれる色
+\definecolor{text-color}{gray}{0.2} % テキストに使われる色
+\definecolor{block-title}{RGB}{255, 255, 255} % ブロックの文字に使われる色
+\definecolor{block-background}{RGB}{0,84,165} % ブロックのタイトルの背景色
+% ブロックのテキストの背景色はタイトルの背景色を元に生成する
+
+\input{style}
+\bibliography{references}
+\thispagestyle{empty}
+
+%% document
+\begin{document}
+
+\maketitle
+
+%-----------------------------------------------------------
+\begin{frame}[t]{概要}
+
+自分用に作ったbeamerのテンプレートです。
+
+基本英語なので日本語の時の動作は試してません。
+
+\begin{block}{ブロックはこんな感じ}
+\begin{itemize}
+\item 作者 mitsu9
+\item 文句があればissueへどうぞ
+\item プルリクエスト大歓迎
+\end{itemize}
+\end{block}
+
+引用はbibtexを使ってどうぞ \footfullcite{sample}。
+
+どの項目を引用するかは特に設定していないので全て表示される気がします。bibファイルの中身を編集することで表示する情報を整理してください。
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}[t]{詳細}
+
+\end{frame}
+
+\end{document}
