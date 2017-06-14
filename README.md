@@ -1,6 +1,8 @@
 beamer-template
 =====
 
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE.txt)
+
 完全自分用のbeamerテンプレート.
 
 ## environment
